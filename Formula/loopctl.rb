@@ -5,20 +5,20 @@
 class Loopctl < Formula
   desc "CLI tool for managing the LoopControl platform"
   homepage "https://github.com/dotdevlabs/loopctl"
-  version "0.1.11"
+  version "0.1.12"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dotdevlabs/loopctl/releases/download/v0.1.11/loopctl_darwin_amd64.tar.gz"
-      sha256 "17ec7b90705570899a776de544f7993f00619d3f3db6447afa38feadbf95127b"
+      url "https://github.com/dotdevlabs/loopctl/releases/download/v0.1.12/loopctl_darwin_amd64.tar.gz"
+      sha256 "a4eadb693f0466c7d5605519cb07b5260c592614dadfb510bac558a7c71efc35"
 
       define_method(:install) do
         bin.install "loopctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dotdevlabs/loopctl/releases/download/v0.1.11/loopctl_darwin_arm64.tar.gz"
-      sha256 "caf96e1c79a79f3e11e3e4aaabecb6098ed632e646130536a59ea06deab50c95"
+      url "https://github.com/dotdevlabs/loopctl/releases/download/v0.1.12/loopctl_darwin_arm64.tar.gz"
+      sha256 "522a084756000254dbdd3e5f45e117c2ffb404dfca58e1cbf7ef997b2ec62420"
 
       define_method(:install) do
         bin.install "loopctl"
@@ -28,15 +28,15 @@ class Loopctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dotdevlabs/loopctl/releases/download/v0.1.11/loopctl_linux_amd64.tar.gz"
-      sha256 "32de86a4361f991bf2a768ef61b87c917404adc0ee139c33e3f9844d6ee8281d"
+      url "https://github.com/dotdevlabs/loopctl/releases/download/v0.1.12/loopctl_linux_amd64.tar.gz"
+      sha256 "ae5bd450217f2d09797ea782e390f7eaad55b0c800afc1464ec521cb2f6470e9"
       define_method(:install) do
         bin.install "loopctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dotdevlabs/loopctl/releases/download/v0.1.11/loopctl_linux_arm64.tar.gz"
-      sha256 "14bd27639934f751288682fcfcee4f9d7f51d37423ecf8a3de4e21628385402f"
+      url "https://github.com/dotdevlabs/loopctl/releases/download/v0.1.12/loopctl_linux_arm64.tar.gz"
+      sha256 "d963a20cb5754c6144f2d759c6a96f5a6988c7fa72a8402f54a88ad02ac642c1"
       define_method(:install) do
         bin.install "loopctl"
       end
