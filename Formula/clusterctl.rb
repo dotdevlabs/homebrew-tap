@@ -5,20 +5,20 @@
 class Clusterctl < Formula
   desc "Cluster lifecycle management CLI tool"
   homepage "https://github.com/dotdevlabs/clusterctl"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dotdevlabs/clusterctl/releases/download/v0.2.0/clusterctl_darwin_amd64.tar.gz"
-      sha256 "2aac759c347d30c8a90505b2429d38130ac1f6553e77c370b1ee1ec9374fee88"
+      url "https://github.com/dotdevlabs/clusterctl/releases/download/v0.2.1/clusterctl_darwin_amd64.tar.gz"
+      sha256 "04962ba03ef6d31afed7592de69527bc8bc9de5dde5e32d45f42abfde7d7cdc3"
 
       define_method(:install) do
         bin.install "clusterctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dotdevlabs/clusterctl/releases/download/v0.2.0/clusterctl_darwin_arm64.tar.gz"
-      sha256 "d1f39f478a98ccb60a22301593683623a8ca1298e5c503cef73d0e2c20a08c9f"
+      url "https://github.com/dotdevlabs/clusterctl/releases/download/v0.2.1/clusterctl_darwin_arm64.tar.gz"
+      sha256 "59d643aaf238d3e209d5a6a660f63f98bf3ab2754b8ec8000b5e1e4baf9819f9"
 
       define_method(:install) do
         bin.install "clusterctl"
@@ -28,15 +28,15 @@ class Clusterctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dotdevlabs/clusterctl/releases/download/v0.2.0/clusterctl_linux_amd64.tar.gz"
-      sha256 "83fbdc042b3d6a1feeb6e1ddfe2f601b433456652e0fb45400e77752b658b8bd"
+      url "https://github.com/dotdevlabs/clusterctl/releases/download/v0.2.1/clusterctl_linux_amd64.tar.gz"
+      sha256 "70efa1b8185250eefcb04a0be7f45b2153f6d1f60cd2b83adb12c8b89fb0b707"
       define_method(:install) do
         bin.install "clusterctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dotdevlabs/clusterctl/releases/download/v0.2.0/clusterctl_linux_arm64.tar.gz"
-      sha256 "6d930e084e58b01b49cf47ae68a0cda80f0331079aed639ea23ca044d8b9b8fb"
+      url "https://github.com/dotdevlabs/clusterctl/releases/download/v0.2.1/clusterctl_linux_arm64.tar.gz"
+      sha256 "8738dab8d4121d0550e938f7d8d28e0f5e7b37d41a063eccafe14f058581c8a7"
       define_method(:install) do
         bin.install "clusterctl"
       end
