@@ -5,20 +5,20 @@
 class Autonomatctl < Formula
   desc "CLI for Autonomat, generated from its OpenAPI contract"
   homepage "https://github.com/dotdevlabs/autonomatctl"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dotdevlabs/autonomatctl/releases/download/v0.1.2/autonomatctl_darwin_amd64.tar.gz"
-      sha256 "a59974e99a254b1616c55173110c8a38d0a137d0186d18cc7c3f4d7db5535c47"
+      url "https://github.com/dotdevlabs/autonomatctl/releases/download/v0.1.3/autonomatctl_darwin_amd64.tar.gz"
+      sha256 "b29e8724ed211f0ac80a29b36d5416857df8c7c1826229d1ca4153afbd3ed85b"
 
       define_method(:install) do
         bin.install "autonomatctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dotdevlabs/autonomatctl/releases/download/v0.1.2/autonomatctl_darwin_arm64.tar.gz"
-      sha256 "e096bd8a1abd08168f07d5abd319b9ffbbf3314afabbc892424e202205939389"
+      url "https://github.com/dotdevlabs/autonomatctl/releases/download/v0.1.3/autonomatctl_darwin_arm64.tar.gz"
+      sha256 "605e91c6d9be3d9946edce35766567cd6d6d8394d1db3ef411c5429050397402"
 
       define_method(:install) do
         bin.install "autonomatctl"
@@ -28,15 +28,15 @@ class Autonomatctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dotdevlabs/autonomatctl/releases/download/v0.1.2/autonomatctl_linux_amd64.tar.gz"
-      sha256 "5f6cf340a26d4345fe5816b90963c62a60ef19678b5063958458d40d24a6456b"
+      url "https://github.com/dotdevlabs/autonomatctl/releases/download/v0.1.3/autonomatctl_linux_amd64.tar.gz"
+      sha256 "6ec63a6fe3531023cac0bb80981bfa75403faf526467bd1aaf3170c9cf44d7f2"
       define_method(:install) do
         bin.install "autonomatctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dotdevlabs/autonomatctl/releases/download/v0.1.2/autonomatctl_linux_arm64.tar.gz"
-      sha256 "3b0fa8dc1dbe61f11bd9d476a0eeb846fd45d511c50e881acf0abf0023fbb48d"
+      url "https://github.com/dotdevlabs/autonomatctl/releases/download/v0.1.3/autonomatctl_linux_arm64.tar.gz"
+      sha256 "cdb9b31cc81a6a083b9a87af763801bf667df5506487a6a9652e0ae4a13c58f2"
       define_method(:install) do
         bin.install "autonomatctl"
       end
